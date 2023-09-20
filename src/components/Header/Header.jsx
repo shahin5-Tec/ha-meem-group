@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
-import bg from "../assets/bg-grad.jpg";
+import bg from "../../assets/bg-grad.jpg";
+import logo from "../../assets/logo.png";
+import "../Header/Header.css";
+
 import {
-  BoltIcon,
   Bars3BottomLeftIcon,
+  CheckIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
 
-const Navbar = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div
@@ -24,7 +26,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <ul className=" text-white text-sm  lg:flex md:hidden hidden items-center space-x-6 ml-8   font-semibold">
+        <ul className=" text-white text-sm  lg:flex md:hidden hidden items-center space-x-4 ml-8   font-semibold">
           <li>
             <NavLink to={"/"} className="hover:bg-red-700 px-2 py-1 rounded-sm">
               Home
@@ -47,12 +49,20 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to={"/about"}
-              className="hover:bg-red-700 px-2 py-1 rounded-sm"
-            >
-              Our Industry
+            <NavLink to={"/about"}>
+              <div className="hover:bg-red-700 px-2 py-1 rounded-sm flex items-center">
+                Our Industries
+                <CheckIcon className=" hover: h-3 " />
+              </div>
             </NavLink>
+            <ul className="dropdown p-5 space-y-2">
+              <li>Woven</li>
+              <li>sweater</li>
+              <li>Laundry</li>
+              <li>Denim Mili</li>
+              <li>Design and sample</li>
+              <li>Ancillary</li>
+            </ul>
           </li>
           <li>
             <NavLink
@@ -66,7 +76,7 @@ const Navbar = () => {
             <NavLink
               to={"/"}
               className={({ isActive }) =>
-                isActive ? "  bg-red-600 px-2 py-1 rounded-sm" : ""
+                isActive ? " bg-red-700 px-2 py-1 rounded-sm" : ""
               }
             >
               Carrer
@@ -89,18 +99,17 @@ const Navbar = () => {
             title="open-menu"
             onClick={() => setIsMenuOpen(true)}
           >
-            <Bars3BottomLeftIcon class="h-6 w-6 text-gray-500" />
+            <Bars3BottomLeftIcon class="h-6 w-6 text-white bg-red-700" />
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full z-10">
-              <div className="p-5 bg-white border rounded shadow-sm">
+            <div className="absolute top-0  left-0 w-full z-10">
+              <div className="p-5  rounded shadow-sm">
                 {/* Logo & Button section */}
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <Link to="/" className="flex items-center ">
-                      <BoltIcon class="h-6 w-6 text-blue-500" />
-                      <span className="text-xl ms-2 font-bold -tracking-wide">
-                        <img src={logo} alt="" />
+                      <span className="text-xl  ms-2 font-bold -tracking-wide">
+                        {/* <img  src={logo} alt="" /> */}
                       </span>
                     </Link>
                   </div>
@@ -111,17 +120,17 @@ const Navbar = () => {
                       title="open-menu"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <XMarkIcon className="w-5 text-gray-600" />
+                      <Bars3BottomLeftIcon class="h-6 w-6 text-white bg-red-700" />
                     </button>
                   </div>
                 </div>
                 {/* Mobile Nav Items Section */}
-                <nav>
-                  <ul className="space-y-4">
+                <nav className="mt-8">
+                  <ul className="space-y-4   font-semibold">
                     <li>
                       <NavLink
                         to={"/"}
-                        className="hover:bg-red-700 px-2 py-1 rounded-sm"
+                        className="hover:bg-red-700 px-2 py-1 rounded-sm mt-5"
                       >
                         Home
                       </NavLink>
@@ -143,11 +152,11 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        to={"/about"}
-                        className="hover:bg-red-700 px-2 py-1 rounded-sm"
+                    <NavLink
+                        to={"/contact"}
+                        className="hover:bg-red-700 px-2 py-1  rounded-sm "
                       >
-                        Our Industry
+                        Our Indusrties
                       </NavLink>
                     </li>
                     <li>
@@ -187,4 +196,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
