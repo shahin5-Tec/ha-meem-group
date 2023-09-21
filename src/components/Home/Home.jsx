@@ -1,4 +1,4 @@
-import { ArrowLongDownIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon, ArrowLongDownIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 
 const images = [
@@ -114,6 +114,10 @@ const Home = () => {
                 TEA GARDEN
                 </li>
                 <li className="bg-gray-100 py-3">LABEL / EMBROIDERY FACILITY</li>
+                {/* icon-part */}
+                <li className="w-12 h-12 mx-auto">
+                <a href="/"> <ArrowDownIcon /></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -135,14 +139,18 @@ const Home = () => {
               <li className="bg-gray-100 py-3">MENS SHIRTS</li>
               <li className="bg-gray-200 py-3">DRESS PANTS</li>
               <li className="bg-gray-100 py-3">OUTWEAR / JACKETS FACILITY</li>
+              {/* icon-part */}
+              <li className="w-12 h-12 mx-auto">
+                   <a href="/"> <ArrowDownIcon /></a>
+                </li>
              </ul>
             </div>
           </div>
-          {/* <div>
+          <div>
             <h2 className="bg-stone-700 py-3 text-4xl text-white">
               Ha-Meem at a glance
             </h2>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
