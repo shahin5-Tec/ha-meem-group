@@ -1,16 +1,12 @@
+import { ArrowLongDownIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-// import slider1 from '../../assets/slider/bg1.jpg'
-// import slider2 from '../../assets/slider/bg2.jpg'
-// import slider3 from '../../assets/slider/bg3.jpg'
-// import slider4 from '../../assets/slider/bg4.jpg'
-// import slider5 from '../../assets/slider/bg5.jpg'
 
 const images = [
-  "/public/slider/bg1.jpg",
-  "/public/slider/bg2.jpg",
-  "/public/slider/bg3.jpg",
-  "/public/slider/bg4.jpg",
-  "/public/slider/12.jpg",
+  "/src/assets/slider/bg1.jpg",
+  "/src/assets/slider/bg2.jpg",
+  "/src/assets/slider/bg3.jpg",
+  "/src/assets/slider/bg4.jpg",
+  "/src/assets/slider/12.jpg",
 ];
 
 const Home = () => {
@@ -46,7 +42,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto lg:px-32 mt-5  ">
+      <div className="mx-auto lg:px-32 mt-8 bg-gray-200 ">
         <h2 className="text-3xl font-semibold">Welcome to Ha-Meem Group</h2>
         <div className="mt-10 font-serif">
           <p>
@@ -93,7 +89,41 @@ const Home = () => {
           </p>
         </div>
         <hr className="mt-5 " />
-       
+        <div className=" mt-5 grid grid-cols-3 gap-4  text-center">
+          <div>
+            <h2 className="bg-stone-700 py-3 text-4xl text-white">
+              Our Strength
+            </h2>
+            <div>
+              <ul>
+                <li className=" bg-gray-200 py-5">
+                  550 MILLION USD TURNOVER (woven+denim+sweater)
+                </li>
+                <li className="bg-gray-100 py-3">7 MILLION PCS/MONTH PRODUCTION</li>
+                <li className="bg-gray-200 py-3"> WASHING PLANTS</li>
+                <li className="bg-gray-100 py-3">300 PRODUCTION LINES</li>
+                <li className="bg-gray-200 py-3">PACKAGING INDUSTRY</li>
+                <li className="bg-gray-100 py-3">TRANSPORT FACILITIES</li>
+                <li className="bg-gray-200 py-3">
+                  HONG KONG & CHINA SOURCING OFFICES
+                </li>
+                <li className="bg-gray-100 py-3">
+                  PRINTING OF GARMENTS & PAPERS
+                </li>
+                <li className="bg-gray-200 py-3">
+                TEA GARDEN
+                </li>
+                <li className="bg-gray-100 py-3">LABEL / EMBROIDERY FACILITY</li>
+              </ul>
+            </div>
+          </div>
+         
+          {/* <div>
+            <h2 className="bg-stone-700 py-3 text-4xl text-white">
+              Ha-Meem at a glance
+            </h2>
+          </div> */}
+        </div>
       </div>
     </div>
   );
