@@ -1,5 +1,7 @@
 import { ArrowDownIcon, ArrowLongDownIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
+// import videobg from '../../assets/video/Ha-Meem-Video-Presentation.mp4'
+import Indusrty from "../../Industry/Indusrty";
 
 const images = [
   "/src/assets/slider/bg1.jpg",
@@ -8,6 +10,7 @@ const images = [
   "/src/assets/slider/bg4.jpg",
   "/src/assets/slider/12.jpg",
 ];
+const videoes = ["/src/assets/video/Ha-Meem-Video-Presentation.mp4"];
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -42,7 +45,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto lg:px-32 mt-8 bg-gray-200 ">
+      <div className="mx-auto lg:px-32 pt-8 bg-gray-200 ">
         <h2 className="text-3xl font-semibold">Welcome to Ha-Meem Group</h2>
         <div className="mt-10 font-serif">
           <p>
@@ -99,7 +102,9 @@ const Home = () => {
                 <li className=" bg-gray-200 py-5">
                   550 MILLION USD TURNOVER (woven+denim+sweater)
                 </li>
-                <li className="bg-gray-100 py-3">7 MILLION PCS/MONTH PRODUCTION</li>
+                <li className="bg-gray-100 py-3">
+                  7 MILLION PCS/MONTH PRODUCTION
+                </li>
                 <li className="bg-gray-200 py-3"> WASHING PLANTS</li>
                 <li className="bg-gray-100 py-3">300 PRODUCTION LINES</li>
                 <li className="bg-gray-200 py-3">PACKAGING INDUSTRY</li>
@@ -110,13 +115,16 @@ const Home = () => {
                 <li className="bg-gray-100 py-3">
                   PRINTING OF GARMENTS & PAPERS
                 </li>
-                <li className="bg-gray-200 py-3">
-                TEA GARDEN
+                <li className="bg-gray-200 py-3">TEA GARDEN</li>
+                <li className="bg-gray-100 py-3">
+                  LABEL / EMBROIDERY FACILITY
                 </li>
-                <li className="bg-gray-100 py-3">LABEL / EMBROIDERY FACILITY</li>
                 {/* icon-part */}
                 <li className="w-12 h-12 mx-auto">
-                <a href="/"> <ArrowDownIcon /></a>
+                  <a href="/">
+                    {" "}
+                    <ArrowDownIcon />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -126,33 +134,53 @@ const Home = () => {
               Major Products
             </h2>
             <div>
-             <ul>
-             <li className="bg-gray-200 py-5">
-                ALL TYPES OF BOTTOMS AND TOPS (Hi-Fashion with critical washes)
-              </li>
-              <li className="bg-gray-100 py-3">CRITICAL CARGOS</li>
-              <li className="bg-gray-200 py-3">HI-FASHION DENIM JEANS</li>
-              <li className="bg-gray-100 py-3">BASIC AND HIFASHION WASHES</li>
-              <li className="bg-gray-200 py-3">WRINKLE FREE</li>
-              <li className="bg-gray-100 py-3">OVER DYEING OF GARMENTS</li>
-              <li className="bg-gray-200 py-3">LASER FINISH / 3D WHISKER</li>
-              <li className="bg-gray-100 py-3">MENS SHIRTS</li>
-              <li className="bg-gray-200 py-3">DRESS PANTS</li>
-              <li className="bg-gray-100 py-3">OUTWEAR / JACKETS FACILITY</li>
-              {/* icon-part */}
-              <li className="w-12 h-12 mx-auto">
-                   <a href="/"> <ArrowDownIcon /></a>
+              <ul>
+                <li className="bg-gray-200 py-5">
+                  ALL TYPES OF BOTTOMS AND TOPS (Hi-Fashion with critical
+                  washes)
                 </li>
-             </ul>
+                <li className="bg-gray-100 py-3">CRITICAL CARGOS</li>
+                <li className="bg-gray-200 py-3">HI-FASHION DENIM JEANS</li>
+                <li className="bg-gray-100 py-3">BASIC AND HIFASHION WASHES</li>
+                <li className="bg-gray-200 py-3">WRINKLE FREE</li>
+                <li className="bg-gray-100 py-3">OVER DYEING OF GARMENTS</li>
+                <li className="bg-gray-200 py-3">LASER FINISH / 3D WHISKER</li>
+                <li className="bg-gray-100 py-3">MENS SHIRTS</li>
+                <li className="bg-gray-200 py-3">DRESS PANTS</li>
+                <li className="bg-gray-100 py-3">OUTWEAR / JACKETS FACILITY</li>
+                {/* icon-part */}
+                <li className="w-12 h-12 mx-auto">
+                  <a href="/">
+                    {" "}
+                    <ArrowDownIcon />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div>
             <h2 className="bg-stone-700 py-3 text-4xl text-white">
               Ha-Meem at a glance
             </h2>
+            {/* <li>
+           <video src={videobg} autoPlay loop></video>
+
+            
+            </li> */}
           </div>
         </div>
       </div>
+
+     <Indusrty/>
+
+       {/* Achivements */}
+     {/* <div className="mt-10">
+    
+      <p>Annual Winner of Strategic Quality Assurance Dept. KOHLS. 2010.</p>
+      <p>Annual Winner of Strategic Quality Assurance Dept. KOHLS. 2009.</p>
+      <p> Technical Design Certification. KOHLS. 2011.</p>
+      <p>Technical Performance Award. JCPenny. 2009.</p>
+     </div> */}
     </div>
   );
 };

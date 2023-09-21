@@ -48,14 +48,14 @@ const Header = () => {
               Merchandising
             </NavLink>
           </li>
-          <li>
+          <li >
             <NavLink to={"/about"}>
               <div className="hover:bg-red-700 px-2 py-1 rounded-sm flex items-center">
                 Our Industries
                 <CheckIcon className=" hover: h-3 " />
               </div>
             </NavLink>
-            <ul className="dropdown p-5 space-y-2">
+            <ul className="dropdown overflow-hidden p-5 space-y-2">
               <li>Woven</li>
               <li>sweater</li>
               <li>Laundry</li>
@@ -153,7 +153,7 @@ const Header = () => {
                     </li>
                     <li>
                     <NavLink
-                        to={"/contact"}
+                        to={"/industry"}
                         className="hover:bg-red-700 px-2 py-1  rounded-sm "
                       >
                         Our Indusrties
