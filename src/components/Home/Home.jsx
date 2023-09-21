@@ -117,7 +117,27 @@ const Home = () => {
               </ul>
             </div>
           </div>
-         
+          <div>
+            <h2 className="bg-stone-700 py-3 text-4xl text-white">
+              Major Products
+            </h2>
+            <div>
+             <ul>
+             <li className="bg-gray-200 py-5">
+                ALL TYPES OF BOTTOMS AND TOPS (Hi-Fashion with critical washes)
+              </li>
+              <li className="bg-gray-100 py-3">CRITICAL CARGOS</li>
+              <li className="bg-gray-200 py-3">HI-FASHION DENIM JEANS</li>
+              <li className="bg-gray-100 py-3">BASIC AND HIFASHION WASHES</li>
+              <li className="bg-gray-200 py-3">WRINKLE FREE</li>
+              <li className="bg-gray-100 py-3">OVER DYEING OF GARMENTS</li>
+              <li className="bg-gray-200 py-3">LASER FINISH / 3D WHISKER</li>
+              <li className="bg-gray-100 py-3">MENS SHIRTS</li>
+              <li className="bg-gray-200 py-3">DRESS PANTS</li>
+              <li className="bg-gray-100 py-3">OUTWEAR / JACKETS FACILITY</li>
+             </ul>
+            </div>
+          </div>
           {/* <div>
             <h2 className="bg-stone-700 py-3 text-4xl text-white">
               Ha-Meem at a glance
